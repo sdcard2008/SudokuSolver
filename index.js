@@ -1,4 +1,4 @@
-import { getEmptyRoomsIndex , returnColumnForm} from "./src/utils.js"
+import { getEmptyRoomsIndex , returnColumnForm , fillEmptyRooms} from "./src/utils.js"
 //imports ^^
 // empty rooms are marked as "x"
 let emptySudoku = [
@@ -10,8 +10,6 @@ let emptySudoku = [
 let emptyRooms = getEmptyRoomsIndex(emptySudoku)
 let columnForm = returnColumnForm(emptySudoku , 4)
 
+let possibleNumbers = fillEmptyRooms(emptySudoku , emptyRooms , columnForm , 4)
 
-
-
-
-
+console.log(possibleNumbers)
